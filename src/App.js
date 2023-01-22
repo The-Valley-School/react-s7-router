@@ -1,15 +1,17 @@
 import React from 'react';
 import './App.css';
-import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
+import { NavLink, BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './components/Home';
 
 // Import clásico para componentes no lazy
 // import Faqs from './components/Faqs';
 // import About from './components/About';
+// import NotFound from './components/NotFound';
 
 // Importamos componentes lazy
 const About = React.lazy(() => import("./components/About"));
 const Faqs = React.lazy(() => import("./components/Faqs"));
+const NotFound = React.lazy(() => import("./components/NotFound"));
 
 function App() {
   return (
@@ -17,11 +19,11 @@ function App() {
       <BrowserRouter>
 
         <nav className='navigation'>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/faqs/0">FAQs 0</Link>
-          <Link to="/faqs/1">FAQs 1</Link>
-          <Link to="/faqs/2">FAQs 2</Link>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/faqs/0">FAQs 0</NavLink>
+          <NavLink to="/faqs/1">FAQs 1</NavLink>
+          <NavLink to="/faqs/2">FAQs 2</NavLink>
         </nav>
 
         <Routes>
@@ -31,6 +33,9 @@ function App() {
           {/* Rutas cargadas de forma lazy */}
           <Route path='/about' element={<React.Suspense fallback={<p>Cargando...</p>}> <About></About> </React.Suspense>}></Route>
           <Route path='/faqs/:id' element={<React.Suspense fallback={<p>Cargando...</p>}> <Faqs></Faqs> </React.Suspense>}></Route>
+          
+          {/* Paginas no encontradas */}
+          <Route path="*" element={<React.Suspense fallback={<p>Cargando...</p>}> <NotFound></NotFound> </React.Suspense>}></Route>
         </Routes>
 
       </BrowserRouter>
