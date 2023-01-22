@@ -1,10 +1,34 @@
+import { useParams } from "react-router-dom";
+
+const faqs = [{
+  question: "¿Cómo puedo llegar al recinto?",
+  answer: "Existen buses a disposición del publico"
+}, {
+  question: "¿A qué hora empieza?",
+  answer: "A las 22.00"
+}, {
+  question: "¿Puedo meter comida?",
+  answer: "No, tienes que comprar dentro"
+}];
+
 
 const Faqs = () => {
+
+  const { id } = useParams();
 
   return (
     <div className="page">
       <h1>Faqs</h1>
-      <p>Vestibulum ac egestas augue, quis iaculis nibh. Aliquam ligula orci, placerat ut nulla vel, pulvinar dictum nibh. Pellentesque gravida turpis lorem, condimentum rhoncus risus eleifend sed. Maecenas vestibulum metus in bibendum porta. Nullam eget enim magna. Mauris faucibus ligula sit amet augue euismod, quis aliquet diam sagittis. Duis pulvinar efficitur nulla vel lobortis. Fusce finibus libero ac turpis hendrerit, eu efficitur sem aliquet. Aliquam erat volutpat. Nulla eget placerat orci. Quisque venenatis id nunc sit amet fermentum. Pellentesque varius viverra quam. Nam ac nunc at massa varius semper. Aliquam viverra a est aliquet porta. Duis ultrices elementum velit in viverra. Donec tincidunt et mi vel hendrerit.</p>
+
+      {
+        faqs[id] ?
+          <div className="faq">
+            <p className="faq__question"><strong>{faqs[id].question}</strong></p>
+            <p className="faq__answer">{faqs[id].answer}</p>
+          </div> :
+          <p>No tengo esa pregunta, prueba con otro número</p>
+      }
+
     </div>
   );
 }
