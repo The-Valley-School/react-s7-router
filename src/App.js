@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import { NavLink, BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './components/Home';
 import MyAccount from './components/MyAccount';
 import Login from './components/Login';
+import Header from './components/Header/Header';
 
 // Import clásico para componentes no lazy
 // import Faqs from './components/Faqs';
@@ -29,15 +30,7 @@ function App() {
       <div className="app">
         <BrowserRouter>
 
-          <nav className='navigation'>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/faqs/0">FAQs 0</NavLink>
-            <NavLink to="/faqs/1">FAQs 1</NavLink>
-            <NavLink to="/faqs/2">FAQs 2</NavLink>
-            <NavLink to="/login">Login</NavLink>
-            <NavLink to="/my-account">My Account</NavLink>
-          </nav>
+          <Header></Header>
 
           <Routes>
             {/* Rutas cargadas normal (no lazy) */}
