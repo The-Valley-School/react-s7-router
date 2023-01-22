@@ -1,8 +1,15 @@
+import React from 'react';
 import './App.css';
 import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
-import Faqs from './components/Faqs';
-import About from './components/About';
 import Home from './components/Home';
+
+// Import clásico para componentes no lazy
+// import Faqs from './components/Faqs';
+// import About from './components/About';
+
+// Importamos componentes lazy
+const About = React.lazy(() => import("./components/About"));
+const Faqs = React.lazy(() => import("./components/Faqs"));
 
 function App() {
   return (
@@ -18,9 +25,12 @@ function App() {
         </nav>
 
         <Routes>
+          {/* Ejemplo de ruta cargada normal (no lazy) */}
           <Route path='/' element={<Home></Home>}></Route>
-          <Route path='/about' element={<About></About>}></Route>
-          <Route path='/faqs/:id' element={<Faqs></Faqs>}></Route>
+
+          {/* Rutas cargadas de forma lazy */}
+          <Route path='/about' element={<React.Suspense fallback={<p>Cargando...</p>}> <About></About> </React.Suspense>}></Route>
+          <Route path='/faqs/:id' element={<React.Suspense fallback={<p>Cargando...</p>}> <Faqs></Faqs> </React.Suspense>}></Route>
         </Routes>
 
       </BrowserRouter>
