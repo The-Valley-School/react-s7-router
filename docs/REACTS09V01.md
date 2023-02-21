@@ -18,7 +18,7 @@ npm install react-router-dom
 <Route path="/" component={Home} />
 ```
 
-**Link** es el componente que se utiliza para crear enlaces entre diferentes rutas de la aplicación. Es similar a los enlaces <a> normales, pero se utiliza para navegar entre las rutas definidas en lugar de cambiar de página completamente.
+**Link** es el componente que se utiliza para crear enlaces entre diferentes rutas de la aplicación. Es similar a los enlaces normales, pero se utiliza para navegar entre las rutas definidas en lugar de cambiar de página completamente.
 
 El componente **Routes** es el que se utiliza para colocar todas las rutas definidas en la aplicación, y se suele colocar dentro del componente BrowserRouter.
 
