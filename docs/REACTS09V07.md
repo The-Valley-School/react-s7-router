@@ -8,7 +8,7 @@ Para ello seguiremos los siguientes pasos:
 
 Crea un proyecto nuevo haciendo uso de create-react-app e instala la librería react-router-dom
 
-<https://reactrouter.com/en/main>
+<https://reactrouter.com/en/main/>
 
 **Paso 2: Añade la navegación:**
 
@@ -19,7 +19,7 @@ Crea las siguientes rutas:
 - /product-detail/:id
 - /login
 - /my-account
-- * (un Not found para todas las páginas que no coincidan con las anteriores)
+- (un Not found para todas las páginas que no coincidan con las anteriores)
 
 Y crea un menú de navegación para moverte entre ellas. En el menú de navegación debes poner un botón de atrás y adelante para moverte entre el historial de páginas visitadas:
 
