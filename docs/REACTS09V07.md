@@ -1,4 +1,4 @@
-# Video 06 - Ejercicio: Catálogo de productos
+# Video 07 - Ejercicio: Catálogo de productos
 
 Vamos a crear un catálogo de productos con navegación. 
 
