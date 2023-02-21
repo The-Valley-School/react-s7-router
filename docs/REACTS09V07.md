@@ -23,7 +23,7 @@ Crea las siguientes rutas:
 
 Y crea un menú de navegación para moverte entre ellas. En el menú de navegación debes poner un botón de atrás y adelante para moverte entre el historial de páginas visitadas:
 
-![home.png](docs/assets/home.png)
+![home.png](/docs/assets/home.png)
 
 En la Home como se muestra en la imagen añadiremos contenido de relleno (Lorem ipsum)
 
@@ -85,7 +85,7 @@ export const products = [{
 
 La página de productos quedará así:
 
-![Untitled](docs/assets/Untitled.png)
+![Untitled](/docs/assets/Untitled.png)
 
 **Paso 4: Página de detalle de producto**
 
@@ -93,13 +93,13 @@ Al pulsar en el enlace “ver producto” navegaremos al detalle de un producto,
 
 Cuando pintemos la página de detalle de producto miraremos el ID y con ese ID buscaremos en el array el producto a mostrar y lo pintaremos:
 
-![Untitled](docs/assets/Untitled%201.png)
+![Untitled](/docs/assets/Untitled%201.png)
 
 **Paso 5: Página de Login**
 
 Crea una página donde mediante un botón podremos hacer login:
 
-![Untitled](docs/assets/Untitled%202.png)
+![Untitled](/docs/assets/Untitled%202.png)
 
 Hasta que no hagas login no podrás navegar a Mi Cuenta, siempre que lo intentes te llevará a Login de nuevo
 
@@ -107,7 +107,7 @@ Hasta que no hagas login no podrás navegar a Mi Cuenta, siempre que lo intentes
 
 Crea la página para mostrar la página de Mi Cuenta, ahí mostraremos el nombre de usuario y si ha marcado como favorito un producto indicaremos cual es:
 
-![Untitled](docs/assets/Untitled%203.png)
+![Untitled](/docs/assets/Untitled%203.png)
 
 Puedes guardar la información del producto favorito dentro del contexto que guarda la información del usuario.
 
@@ -115,4 +115,4 @@ Puedes guardar la información del producto favorito dentro del contexto que gua
 
 Siempre que el usuario ponga una ruta no válida verá la página de Not Found:
 
-![Untitled](docs/assets/Untitled%204.png)
+![Untitled](/docs/assets/Untitled%204.png)
