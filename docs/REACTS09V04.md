@@ -8,7 +8,7 @@ Si queremos mostrar que una de las rutas está activa debemos sustituir el compo
 
 Esto hará que si la página actual coincide con el enlace, React le pondrá la clase active, por lo que podremos ponerle estilos diferentes por CSS:
 
-```jsx
+```css
 .links a {
   color: #333;
   text-decoration: none;
@@ -77,7 +77,7 @@ export default App;
 
 Y nuestro App.css así:
 
-```jsx
+```css
 .app {
   padding: 10px;
 }
