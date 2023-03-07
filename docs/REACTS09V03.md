@@ -16,7 +16,7 @@ Luego, en lugar de utilizar el componente Home directamente en la ruta, se utili
 <Route path='/about' element={
 	<React.Suspense fallback={<p>Cargando...</p>}>
 		<About></About>
-		</React.Suspense>}>
+	</React.Suspense>}>
 </Route>
 ```
 
